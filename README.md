@@ -43,7 +43,7 @@ The app is created in `dist/`. Build separately on macOS, Windows, and Linux; Py
 
 ## GitHub Actions builds
 
-The workflow in `.github/workflows/build.yml` builds all three desktop targets when run manually or when a version tag such as `v1.0.0` is pushed. Each platform build is uploaded as a downloadable workflow artifact. Tag builds also create a GitHub Release with the packaged app files.
+The workflow in `.github/workflows/build.yml` builds all three desktop targets when changes are pushed to `main`, when run manually, or when a version tag such as `v1.0.0` is pushed. Each platform build is uploaded as a downloadable workflow artifact. Tag builds also create a GitHub Release with the packaged app files.
 
 To make a release:
 
