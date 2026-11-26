@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+build/
+dist/
+*.spec
+.venv/
+.DS_Store
+Tonverk Kit Forge.app/
+Tonverk Kit Forge macOS.zip
