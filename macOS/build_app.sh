@@ -17,4 +17,6 @@ cat > "$APP/Contents/Info.plist" <<'PLIST'
 <key>NSHighResolutionCapable</key><true/>
 </dict></plist>
 PLIST
+codesign --force --deep --sign - --identifier audio.tonverk.kitforge --timestamp=none "$APP"
+codesign --verify --deep --strict "$APP"
 echo "Built $APP"
