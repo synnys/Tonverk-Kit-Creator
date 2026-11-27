@@ -47,7 +47,7 @@ The native SwiftUI macOS app can be built with Xcode Command Line Tools:
 bash macOS/build_app.sh
 ```
 
-This creates `Tonverk Kit Forge.app` in the project folder. It remembers slot folders and output settings, and writes `key-center` values in the exact `60.0` format used by the example mapping.
+This creates `Tonverk Kit Forge.app` in the project folder. It remembers slot folders and output settings, and writes `key-center` values in the exact `60.0` format used by the example mapping. The app is ad-hoc signed but not Apple-notarized; on first launch, macOS may require you to Control-click the app and choose **Open**.
 
 ## GitHub Actions builds
 
