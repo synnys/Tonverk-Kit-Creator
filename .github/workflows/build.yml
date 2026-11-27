@@ -44,7 +44,11 @@ jobs:
         if: runner.os == 'Linux'
         run: .venv/bin/python -m pip install -r requirements-build.txt
       - name: Build app
+        if: runner.os != 'macOS'
         run: pyinstaller --noconfirm --windowed --name "Tonverk Kit Forge" app.py
+      - name: Build native macOS app
+        if: runner.os == 'macOS'
+        run: bash macOS/build_app.sh "dist/Tonverk Kit Forge.app"
       - name: Package app
         shell: bash
         run: |
