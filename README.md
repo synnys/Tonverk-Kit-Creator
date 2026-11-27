@@ -33,13 +33,21 @@ Install the build dependency:
 python3 -m pip install -r requirements-build.txt
 ```
 
-Then build on the operating system you want to target:
+On Windows and Linux, build on the operating system you want to target:
 
 ```bash
 pyinstaller --noconfirm --windowed --name "Tonverk Kit Forge" app.py
 ```
 
 The app is created in `dist/`. Build separately on macOS, Windows, and Linux; PyInstaller does not cross-compile desktop apps between operating systems. On Linux, Tkinter must be installed on the build machine.
+
+The native SwiftUI macOS app can be built with Xcode Command Line Tools:
+
+```bash
+bash macOS/build_app.sh
+```
+
+This creates `Tonverk Kit Forge.app` in the project folder. It remembers slot folders and output settings, and writes `key-center` values in the exact `60.0` format used by the example mapping.
 
 ## GitHub Actions builds
 
